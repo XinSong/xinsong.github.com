@@ -1,13 +1,14 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
+
 permalink: /:categories/:year/:month/:day/:title 
-baseurl: /
-encoding: utf-8
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
-baseurf: /
+baseurl: /
 encoding: utf-8
+markdown: redcarpet
+auto: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
