@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 泊松分布
+title: "泊松分布"
+description: "介绍了泊松分布的由来，及其于伯努利分布的关系"
 category： maths
 ---
 {% include JB/setup %}
