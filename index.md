@@ -2,6 +2,7 @@
 layout: page
 title: Hello World!
 categories: Hello
+tagline: Stay hungry, Stay Foolish!
 ---
 {% include JB/setup %}
 <ul class="posts">
