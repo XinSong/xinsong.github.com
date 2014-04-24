@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: 泊松分布
 category： maths
 ---
