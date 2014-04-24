@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: post
 title: 泊松分布
 category： maths
-tags： 数学分布 概率论与数理统计 陈希孺
 ---
+
 若随机变量 $X$ 的可能取值为0,1,2，...,且概率分布为$$P(X = i) = \frac{e^{-\lambda}\lambda^i}{i!} .........公式(1)$$则成 $X$ 服从泊松分布，常记为 $X$ ~$P(\lambda)$。此处，$\lambda$>0是某一常数.
 
 由于$$e^\lambda=\frac{\sum_{i=0}^{\infty}\lambda^i}{i!}.........公式(2)$$,可知公式(1)右边对$i=0,1,...$求和的结果为1.
