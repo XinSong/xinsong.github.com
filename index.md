@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Hello World!
-categories: Hello
+title: iVoid
 tagline: Stay hungry, Stay Foolish!
 ---
 {% include JB/setup %}
