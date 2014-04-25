@@ -2,9 +2,11 @@
 layout: post
 title: "泊松分布"
 description: "介绍了泊松分布的由来，及其于伯努利分布的关系"
-category： maths
+category: maths
 ---
+
 {% include JB/setup %}
+
 若随机变量 $X$ 的可能取值为0,1,2，...,且概率分布为$$P(X = i) = \frac{e^{-\lambda}\lambda^i}{i!} .........公式(1)$$则成 $X$ 服从泊松分布，常记为 $X$ ~$P(\lambda)$。此处，$\lambda$>0是某一常数.
 
 由于$$e^\lambda=\frac{\sum_{i=0}^{\infty}\lambda^i}{i!}.........公式(2)$$,可知公式(1)右边对$i=0,1,...$求和的结果为1.
@@ -23,10 +25,3 @@ category： maths
 注意到当$n\rightarrow \infty$取极限时，我们有$$\frac{n \choose i}{n^i}\rightarrow \frac{1}{i!}, (1-\frac{\lambda}{n})^n\rightarrow e^{-\lambda}$$因此
 $$P(X = i) = {n \choose i}(\frac{\lambda}{n})^i(1-\frac{\lambda}{n})^{n-i}\\=\frac{e^{-\lambda}\lambda^i}{i!}$$
 从上述推导可以看出：泊松分布可作为二项分布的极限而得到。一般的说，若$X~B(n,p)$,其中$n$很大，$p$很小，因而$np=\lambda$不太大时，$X$的分布接近于泊松分布$P(\lambda)$。这个事实有时可将较难计算的二项分布转化为泊松分布去计算。
-
-
-
-
-
-
-
