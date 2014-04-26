@@ -42,4 +42,4 @@ $$\frac{n \choose i}{n^i}\rightarrow \frac{1}{i!}, (1-\frac{\lambda}{n})^n\right
 
 $$P(X = i) = {n \choose i}(\frac{\lambda}{n})^i(1-\frac{\lambda}{n})^{n-i}\\=\frac{e^{-\lambda}\lambda^i}{i!}$$
 
-从上述推导可以看出：泊松分布可作为二项分布的极限而得到。一般的说，若$$X~B(n,p)$$,其中$$n$$很大，$$p$$很小，因而$$np=\lambda$$不太大时，$$X$$的分布接近于泊松分布$$P(\lambda)$$。这个事实有时可将较难计算的二项分布转化为泊松分布去计算。
+从上述推导可以看出：泊松分布可作为二项分布的极限而得到。一般的说，若$$X \sim B(n,p)$$,其中$$n$$很大，$$p$$很小，因而$$np=\lambda$$不太大时，$$X$$的分布接近于泊松分布$$P(\lambda)$$。这个事实有时可将较难计算的二项分布转化为泊松分布去计算。
