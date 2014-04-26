@@ -14,38 +14,38 @@ tags: 保序回归 普拉托校准
 普拉托在1999年提出可以通过sigmoid函数来讲SVM的预测结果转化为一个后验的概率值。主要分为三步:
 
 ###1）sigmoid变换
-假设SVM的输出结果为$f(x)$, 为了得到校准之后的概率值，我们对$f(x)$进行变换
+假设SVM的输出结果为$$f(x)$$, 为了得到校准之后的概率值，我们对$$f(x)$$进行变换
 
 $$P(y=1 \| f(x))=\frac{1}{1+e^{Af(x)+B}}$$
 
 其中参数A和B为参数。
 
 ###2）采用极大似然法求解A和B	
-假设$f_i$ 为模型的预测值，$y_i$为真实结果，则对于训练集$（f_i，y_i）$,极大似然函数为
+假设$$f_i$$ 为模型的预测值，$$y_i$$为真实结果，则对于训练集$$（f_i，y_i）$$,极大似然函数为
 
 $$max\prod_{i=1}^{n}p_{i}^{y_i}(1-p_i)^{1-y_i}$$
 
-其中$p_i=\frac{1}{1+e^{Af(x)+B}}$。
-为了计算方便，我们对极大似然函数取对数，并将$max$变为$min$，则原问题变为
+其中$$p_i=\frac{1}{1+e^{Af(x)+B}}$$。
+为了计算方便，我们对极大似然函数取对数，并将$$max$$变为$$min$$，则原问题变为
 
 $$argmin_{A,B} \sum_{i=1}^{n}(y_ilog(p_i)+(1-y_i)log(1-p_i)$$
 
 ###3） 为了防止过拟合，对y值进行校正
 为了防止过拟合，在极大似然函数中，y值并不是简单的0或者1.
-假设训练集中有$N^+个$正样本，$N^-$个负样本，则普拉托变换采用$y^+$ 和$y^-$ 代替1和0.
+假设训练集中有$$N^+$$个正样本，$$N^-$$个负样本，则普拉托变换采用$$y^+$$ 和$$y^-$$ 代替1和0.
 
 $$y^+ = \frac{N^+ +1}{N^+ +2},y^-=\frac{1}{N^-+2}$$
 
 ##Isotonic Regression
-对于给定的训练集$（f_i，y_i）$，其中$f_i$为模型的预测值（为正样本的概率），$y_i$为真实分类。Isotonic Regression寻找变换$m$，使得
+对于给定的训练集$$（f_i，y_i）$$，其中$$f_i$$为模型的预测值（为正样本的概率），$$y_i$$为真实分类。Isotonic Regression寻找变换$$m$$，使得
 
 $$m= argmin_z\sum_{i=1}^{n}(y_i-z(f_i))^2$$ 
 
-Isotonic Regression的一个最为广发的实现是Pool Adjacent Violators算法，简称PAV算法，算法流程如下图。
+Isotonic Regression的一个最为广泛的实现是Pool Adjacent Violators算法，简称PAV算法，算法流程如下图。
 
 ![PAV算法伪代码][1]
 
-时间复杂度$O(n)$,空间复杂度$O(n)$
+时间复杂度$$O(n)$$,空间复杂度$$O(n)$$
 
 下图为PAV算法在15个样本（6个负样本，9个正样本）上的运行示例。
 
@@ -65,6 +65,8 @@ $$A_0,A_1,A_2,......,A_{13},A_{14}$$
  4. 重复上述动作，直至剩下的所有区间都满足单调性要求。
 
 附上一个我自己用Python实现的PAV。
+
+{% highlight python linenos %}
 
     import sys
     class Node:
@@ -106,6 +108,8 @@ $$A_0,A_1,A_2,......,A_{13},A_{14}$$
 	while iter:
 		print iter.start, iter.end, iter.prob
 		iter = iter.next
+
+{% endhighlight python %} 	
 
   [1]: http://ww1.sinaimg.cn/mw690/7c225887jw1efrvnzcmu5j20e507nmyb.jpg
   [2]: http://ww3.sinaimg.cn/mw690/7c225887jw1efrvswllklj20cw0bb757.jpg
