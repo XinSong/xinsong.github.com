@@ -15,7 +15,7 @@ $$P(X = i) = \frac{e^{-\lambda}\lambda^i}{i!} .........公式(1)$$
 
 由于
 
-$$e^\lambda=\frac{\sum_{i=0}^{\infty}\lambda^i}{i!}.........公式(2)$$
+$$e^\lambda=\sum_{i=0}^{\infty}\frac{\lambda^i}{i!}.........公式(2)$$
 
 可知公式(1)右边对$$i=0,1,...$$求和的结果为1.
 
