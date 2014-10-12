@@ -94,6 +94,7 @@ $$[\frac{\hat p + \frac{1}{2n}z_{1-\frac{\alpha}{2}}^2 - z_{1-\frac{\alpha}{2}}\
 更一般的，如果我们允许用户评分为$$n$$档，那么，每一个用户的打分可以格式化为一个$$n$$维的0-1向量，这样，每一部电影的评分分布实际上为一个多元分布。为了解决小众电影投票过少的问题，我们必须同贝叶斯平均法一样，引入先验分布，事实上，引入先验之后的多元分布就变为了Dirichlet分布。有关Dirichlet分布的相关知识可以参考这篇博文 [*The Dirichlet Distribution 狄利克雷分布*](http://www.xperseverance.net/blogs/2012/03/510/)。
 
 Dirichlet评分算法如下：
+
 >1. 预估先验分布$$D(\alpha_1,\alpha_2,...,\alpha_n)$$,可以采用领域知识，也可以直接用全局分布替代;
 >2. 计算每一产品的多元分布$$M(\beta_1,\beta_2,...,\beta_n)$$;
 >3. 用多元分布修正先验分布为$$D(\alpha_1+\beta_1,\alpha_2+\beta_2,...,\alpha_n+\beta_n)$$;
