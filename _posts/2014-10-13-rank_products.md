@@ -95,11 +95,11 @@ $$[\frac{\hat p + \frac{1}{2n}z_{1-\frac{\alpha}{2}}^2 - z_{1-\frac{\alpha}{2}}\
 
 Dirichlet评分算法如下：
 
->1. 预估先验分布$$D(\alpha_1,\alpha_2,...,\alpha_n)$$,可以采用领域知识，也可以直接用全局分布替代;
->2. 计算每一产品的多元分布$$M(\beta_1,\beta_2,...,\beta_n)$$;
->3. 用多元分布修正先验分布为$$D(\alpha_1+\beta_1,\alpha_2+\beta_2,...,\alpha_n+\beta_n)$$;
->4. 计算分布$$D(\alpha_1+\beta_1,\alpha_2+\beta_2,...,\alpha_n+\beta_n)$$的均值为$$(\hat m_1，\hat m_2,...,\hat m_n)$$;
->5. 利用步骤4中得到的均值，采用加权平均的方法求取最终得分。
+> 1. 预估先验分布$$D(\alpha_1,\alpha_2,...,\alpha_n)$$,可以采用领域知识，也可以直接用全局分布替代;
+> 2. 计算每一产品的多元分布$$M(\beta_1,\beta_2,...,\beta_n)$$;
+> 3. 用多元分布修正先验分布为$$D(\alpha_1+\beta_1,\alpha_2+\beta_2,...,\alpha_n+\beta_n)$$;
+> 4. 计算分布$$D(\alpha_1+\beta_1,\alpha_2+\beta_2,...,\alpha_n+\beta_n)$$的均值为$$(\hat m_1，\hat m_2,...,\hat m_n)$$;
+> 5. 利用步骤4中得到的均值，采用加权平均的方法求取最终得分。
 
 
 ###参考资料
