@@ -70,6 +70,8 @@ $$[\frac{\hat p + \frac{1}{2n}z_{1-\frac{\alpha}{2}}^2 - z_{1-\frac{\alpha}{2}}\
 
 在top 250榜单的最后，IMDb公布了自己的打分算法：
 
+$$加权平均分(weighted \ rank, WR) = \frac{v}{v+m} × R +\frac{m}{v+m}× C$$
+
 > * R = 该电影的用户投票的算数平均得分(Rating)。
 > * v = 该电影的投票人数。
 > * m = 入围top 250榜单的电影的最低投票数，目前是25000。
