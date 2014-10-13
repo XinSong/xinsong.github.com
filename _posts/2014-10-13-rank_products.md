@@ -70,8 +70,8 @@ $$[\frac{\hat p + \frac{1}{2n}z_{1-\frac{\alpha}{2}}^2 - z_{1-\frac{\alpha}{2}}\
 
 在top 250榜单的最后，IMDb公布了自己的打分算法：
 
-> asdfR = 该电影的用户投票的算数平均得分(Rating)
-> asdfv = 该电影的投票人数。
+> asdfR该电影的用户投票的算数平均得分(Rating)
+> asdfv该电影的投票人数。
 
 注意：IMDb在统计投票的时候，只会统计经常投票的用户的票数（regular votes)，并不统计那些不经常投票的用户的投票。
 
